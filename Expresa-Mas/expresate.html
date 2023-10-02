@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exprésate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1a8bc00e09.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a class="logo" href="index.html"><img src="images/logo.png" alt="logo" width="45px" height="45px"></a>
+
+            <p><i class="fa-solid fa-grip-lines-vertical"></i></p>
+
+            <ul>
+                <li><a href="community.html">Comunidad</a></li>
+                <li><a href="expresate.html">Expresáte</a></li>
+                <li><a href="autoridades.html">Autoridades</a></li>
+                <li><a href="contact-us.html">Contáctenos</a></li>
+                <li>
+                    <div class="container">
+                        <input type="text" placeholder="Buscar">
+                        <div class="btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <p><i class="fa-solid fa-grip-lines-vertical"></i></p>
+
+            <ul class="other-list">
+                <li>
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about-us.html">Sobre Nosotros</a></li>
+                        <li><a href="frequent-questions.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </li>
+                <li><i class="fa-solid fa-person"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>EXPRÉSATE</h1>
+    </main>
+
+
+        <div class="top-bar">
+            <h1>
+                Exprésate - Foro de Expresa+
+            </h1>
+        </div>
+        <div class="main">
+            <ol>
+            </ol>
+        </div>
+        <script src="data.js"></script>
+        <script>
+            console.log(threads);
+            var container = document.querySelector('ol');
+            for (let thread of threads) {
+                var html = `
+                <li class="row">
+                    <a href="/thread.html?${thread.id}">
+                        <h4 class="title">
+                            ${thread.title}
+                        </h4>
+                        <div class="bottom">
+                            <p class="timestamp">
+                                ${new Date(thread.date).toLocaleString()}
+                            </p>
+                            <p class="comment-count">
+                                ${thread.comments.length} comments
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                `
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        </script>
+        <style>
+            body {
+                margin: 10px 60px;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            h1, h4, ol {
+                margin: 0;
+            }
+            p {
+                margin: 5px 0;
+            }
+            .top-bar {
+                background-color: skyblue;
+                padding: 0 40px;
+            }
+            .main {
+                background-color: #F6F6EF;
+                padding: 10px 15px;
+            }
+            .row {
+                padding: 5px 0;
+            }
+            .bottom {
+                display: flex;
+                color: grey;
+                font-size: 12px;
+            }
+            .timestamp {
+                padding-right: 10px;
+            }
+        </style>
+
+</body>

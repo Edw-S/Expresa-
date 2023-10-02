@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    border-radius: 40px;
+    padding: 0;
+}
+
+i {
+    cursor: pointer;
+}
+
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/wallpaper3.jpg);
+    width: 100%;
+    height: 1000vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 170, 196, 0.7);
+    padding: 5px 3%;
+    margin: 4px;
+    border-radius: 8px;
+    font-weight: bold; 
+}
+
+header {
+    position: sticky;
+    width: 100%;
+}
+
+
+header p {
+    position: relative;
+    font-size: 30px;
+    align-content: center;
+    padding: 5px;
+}
+
+nav a img {
+    position: relative;
+    top: 3px;
+    margin: 6px;
+}
+
+header ul {
+    list-style: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header ul li {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+
+header ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding: 0 20px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+    padding: 10px 0;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background-color: rgb(255, 170, 195, 0.7);
+}
+
+
+ul li:hover ul.dropdown {
+    display: block;
+    width: 100px;
+    border-radius: 5px;
+    padding-top: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover {
+    color: wheat;
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+    left: 7%;
+}
+
+.texto-bienvenida {
+    font-size: 25px;
+    position: relative;
+    display: inline-block;
+    height: 380px;
+    width: 50%;
+    left: 15%;
+    padding: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.other-list li {
+    padding: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.container input {
+    width: 0px;
+    height: 30px;
+    padding: 0 15px;
+    font-size: 10px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 40px;
+    width: 150px;
+}
+
+.btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    top: 0;
+    right: 0;
+    background-color: lightcoral;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+.slider, .slider ul, .slider img{
+    height: 100vh;
+}
+}
+
